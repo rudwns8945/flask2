@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="{{ url_for('static', filename='js/myscript.js')}}"></script>
+    
+     
+</head>
+<body>
+    <!-- HTML 주석-->
+    <h1>방명록에 글쓰기</h1>
+    <form action="write" method="POST" name="frm1">   <!--  가장 중요한 부분!!  post vs get  , HTML 을 도큐먼트라고 함-->
+        <table width="500">
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>제목</td>
+                <td><input type="text" name="subject"></td>
+            </tr>
+            <tr>
+                    <td>내용</td>
+                    <td><textarea name="content" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="저장" onclick="check()">   
+                    <input type="reset" value="취소">
+                </td>
+            </tr>
+        </table>
+    </form>     <!--폼과 슬래쉬 폼 사이에 내용-->
+</body>
+</html>

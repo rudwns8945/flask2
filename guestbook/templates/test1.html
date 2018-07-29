@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %} test1 {% endblock %}
+{% block body %}
+
+<ul>
+    {# jinja2 주석 #}
+    <!-- HTML 주석-->
+    {% for user in users %}
+        <li><a href="{{user.url}}">{{user.username}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+sjj715@naver.com
